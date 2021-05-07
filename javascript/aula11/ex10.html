@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Sistema de nacionalidade</h1>
+
+    Digite o país de onde você é: <input type = "text" name = "txtNac" id ="txtNac">
+    <input type = "button" value = "verificar" onclick = "verificar()">
+    <div id = "res">
+
+    <script>
+
+        var nac = document.querySelector("input#txtNac");
+
+        function verificar() {
+
+            var naci = nac.value;
+            var res = document.querySelector("div#res");
+
+            res.innerHTML = `Seu país de origem é: <strong>${naci}</strong>`
+
+            if(naci == "Brasil") {
+                res.innerHTML += "<p>Você é Brasileiro(a)</p>"
+            } else {
+                res.innerHTML += "<p>Você é estrangeiro(a)</p>"
+            }
+        }
+
+    </script>
+</body>
+</html>

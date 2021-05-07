@@ -1,0 +1,74 @@
+<HTML>
+		
+	<div class="container">
+  		<div class="col-md-8 col-xs-12 col-md-offset-2 push-md-2">
+  		  <carousel [itemsPerSlide]="itemsPerSlide"
+     		            [singleSlideOffset]="singleSlideOffset"
+              		    [noWrap]="noWrap"
+              		    [interval]="false"
+              		    [startFromIndex]="0">
+          
+      		   <slide *ngFor="let slide of slides; let index=index">
+       			 <img [src]="slide.image" alt="image slide" style="display: block; width: 100%;">
+       			   <div class="carousel-caption">
+        		       <h4>Slide {{index}}</h4>
+       			   </div>
+     		   </slide>
+    		   </carousel>
+  		</div>
+	</div>
+
+<TS>
+export class AppComponent {
+
+  itemsPerSlide = 3;
+  singleSlideOffset = false;
+  noWrap = false;
+
+  slides = [
+    {image: '../assets/imagens/ad-b.png'},
+    {image: '../assets/imagens/jv-b.png'},
+    {image: '../assets/imagens/meid-b.png'},
+    {image: '../assets/imagens/ad-g.png'},
+    {image: '../assets/imagens/meid-g.png'},
+    {image: '../assets/imagens/jv-g.png'},
+    {image: '../assets/imagens/ad-b.png'},
+    {image: '../assets/imagens/meid-b.png'},
+    {image: '../assets/imagens/jv-g.png'},
+    {image: '../assets/imagens/ad-g.png'}
+  ];
+
+<TS APP>
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { ModalModule, WavesModule } from 'angular-bootstrap-md';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { DragScrollModule } from 'ngx-drag-scroll';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
+
+
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ModalModule,
+    WavesModule,
+    MDBBootstrapModule.forRoot(),
+    BrowserAnimationsModule,
+    NgbModule,
+    DragScrollModule,
+    CarouselModule.forRoot()
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }

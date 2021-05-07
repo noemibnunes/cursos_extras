@@ -1,0 +1,36 @@
+ngb-carousel #ngcarousel>
+  <ng-template ngbSlide id="one">
+    <div>
+      <img src="../assets/imagens/fotomanha.png" alt="Slide 1">
+      <img src="../assets/imagens/fotomanha.png" alt="Slide 4">
+    </div>
+  </ng-template>
+
+    <ng-template ngbSlide id="two">
+      <div>
+        <img src="../assets/imagens/fotonoite.png" alt="Slide 2">
+      </div>
+    </ng-template>
+
+    <ng-template ngbSlide id="three">
+      <div>
+       <img src="../assets/imagens/fototarde.png" alt="Slide 3">
+      </div>
+    </ng-template>
+</ngb-carousel>
+
+
+ngb-carousel {
+    margin: 50px auto;
+    width: 400px;
+    height: 400px;
+}
+
+ngb-carousel img {
+    width: 100%;
+    outline: none;
+}
+
+ngb-carousel #one {
+    display: inline-block;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang = "pt-br">
+
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+   <link rel = "stylesheet" href = "estilo.css">
+    <title>Super contador</title>
+</head>
+
+<body> 
+    <header>
+        <h1> tabuada </h1>
+    </header>
+   
+ 
+    <section> 
+
+        <div> 
+            <p> Digite um número: 
+                <input type = "number" name = "txtini" id = "txtini" min = "0">
+    
+                <input type = "button" value = "Gerar tabuada" onclick = "Tabuada()">
+            </p>
+        </div>
+
+        <div id = "res"> 
+            <select name = "tabuada" id = "seltab" size = "10"> 
+                <option>Digite um número acima</option>
+            </select>
+        </div>
+    </section>
+
+    <footer> 
+        <p><strong>&copy; Cursoemvídeo </strong></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
